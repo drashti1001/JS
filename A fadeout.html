@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fade Out Using JQuery</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function () {
+$("#btn1").click(function () {
+$("#para").fadeOut(2000);
+});
+$("#btn2").click(function () {
+$("#para").fadeOut(2000);
+});
+$("#btn3").click(function () {
+$("#pic1").fadeOut(3000, "linear", function () {
+window.alert("Yayy!!! Pic 1 faded out");
+});
+$("#pic2").fadeOut(3000, "swing", function () {
+window.alert("Yayy!!! Pic 2 faded out");
+});
+});
+$("#btn4").click(function () {
+$(".ele").fadeIn(2000);
+});
+});
+</script>
+</head>
+<body>
+<p id="para" class="ele">Hello Friend</p>
+<img id="pic1" class="ele" src="https://cdn.educba.com/academy/wp-content/uploads/2019/01/cropped-EDUCBA_LOGO.png" />
+<img id="pic2" class="ele" src="https://cdn.educba.com/academy/wp-content/uploads/2019/01/cropped-EDUCBA_LOGO.png" />
+<br />
+<label>Linear</label>
+<label>Swing</label>
+<br />
+<br />
+<button id="btn1">Fade Out text</button>
+<button id="btn2">Fade Out text slowly</button>
+<button id="btn3">Fade Out images (different transitions)</button>
+<button id="btn4">Show All</button>
+</body>
+</html>
